@@ -1,0 +1,73 @@
+{
+  "num_leaves": {
+    "_type": "randint",
+    "_value": [
+      2,
+      256
+    ]
+  },
+  "bagging_freq": {
+    "_type": "randint",
+    "_value": [
+      0,
+      16
+    ]
+  },
+  "min_child_samples": {
+    "_type": "randint",
+    "_value": [
+      5,
+      100
+    ]
+  },
+  "learning_rate": {
+    "_type": "quniform",
+    "_value": [
+      0.001,
+      0.1,
+      0.001
+    ]
+  },
+  "bagging_fraction": {
+    "_type": "uniform",
+    "_value": [
+      0.4,
+      1
+    ]
+  },
+  "feature_fraction": {
+    "_type": "uniform",
+    "_value": [
+      0.4,
+      1
+    ]
+  },
+  "lambda_l1": {
+    "_type": "loguniform",
+    "_value": [
+      1e-8,
+      10
+    ]
+  },
+  "lambda_l2": {
+    "_type": "loguniform",
+    "_value": [
+      1e-8,
+      10
+    ]
+  },
+  "min_split_gain": {
+    "_type": "uniform",
+    "_value": [
+      0,
+      1
+    ]
+  },
+  "min_child_weight": {
+    "_type": "uniform",
+    "_value": [
+      1e-8,
+      1
+    ]
+  }
+}

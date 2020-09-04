@@ -1,0 +1,59 @@
+authorName: default
+experimentName: default
+trialConcurrency: 1 # 可在web页面更改
+maxExecDuration: 10h
+maxTrialNum: 10
+#choice: local, remote, pai
+trainingServicePlatform: local
+searchSpacePath: search_space.json
+#choice: true, false
+useAnnotation: false
+tuner:
+    #choice: TPE, Random, Anneal, Evolution, BatchTuner, MetisTuner, GPTuner
+    #SMAC (SMAC should be installed through nnictl)
+    builtinTunerName: TPE
+    classArgs:
+        #choice: maximize, minimize
+        optimize_mode: maximize
+trial:
+    command: python3 main.py # 每次重新运行，增加中间数据，提高效率
+    codeDir: .
+    gpuNum: 0
+
+#logDir: /Users/yuanjie/Desktop/Projects/Python/tuning/examples/nni_/lgb_
+
+
+#machineList can be empty if the platform is local
+#machineList:
+#    -   ip: 110.241.141.162 # 台式机
+#        username: yuanjie
+#        passwd: 8643188a
+#    -   ip: 10.177.10.70 # master
+#        username: root
+#        passwd: Betterme8
+#    -   ip: 10.177.26.74 # v100
+#        username: root
+#        passwd: Betterme8
+#    -   ip: 10.25.134.201 # cpu1
+#        username: root
+#        passwd: yuanjie ########
+#    -   ip: 10.177.18.8 # cpu2
+#        username: root
+#        passwd: Betterme8
+#    -   ip: 10.177.18.6 # cpu3
+#        username: root
+#        passwd: Betterme8
+#    -   ip: 10.177.18.9 # cpu4
+#        username: root
+#        passwd: Betterme8
+#    -   ip: 10.177.23.79 # cpu5
+#        username: root
+#        passwd: Betterme8
+#    -   ip: 10.177.23.80 # cpu6
+#        username: root
+#        passwd: Betterme8
+
+
+
+
+
